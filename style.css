@@ -1,0 +1,938 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lugrasimo&family=Ubuntu:ital,wght@1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@700&family=Lugrasimo&family=Ubuntu:ital,wght@1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@700&family=Lugrasimo&family=Philosopher:wght@700&family=Ubuntu:ital,wght@1,400;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+    color: #ededed;
+}
+
+/* ----------------------header------------------ */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 10%;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+
+    position: relative;
+    font-size: 35px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    font-family: 'Philosopher', sans-serif;
+    text-shadow: 0 0 5px red, 0 0 100px red;
+}
+
+.logo span {
+    color: red;
+    font-family: 'Philosopher', sans-serif;
+    text-shadow: 0 0 5px red, 0 0 100px red, 0 0 200px red;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 23px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 50px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    text-shadow: 0 0 5px white;
+    animation-delay: calc(.1s * var(--i));
+}
+
+.navbar a:hover {
+    color: black;
+}
+
+/* -----------------home----------------------- */
+.home {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(img/red.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 65px 10% 0;
+}
+
+.home-content {
+    max-width: 600px;
+    padding: 0px 5px 5px 5px;
+}
+
+.home-content h3 {
+    font-size: 27px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .0.5s;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3 span {
+    color: red;
+    text-shadow: 0 0 5px red, 0 0 100px red;
+    text-decoration: none;
+}
+
+.home-content h1 {
+    font-size: 52px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .0s;
+}
+
+.home-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border: 2px solid rgb(148, 8, 8);
+    border-radius: 50%;
+    font-size: 20px;
+    color: red;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.1s * var(--i));
+    margin: 0px 15px 30px 0;
+}
+
+.home-icons a:hover {
+    background: white;
+
+    color: red;
+    box-shadow: 0 0 20px white;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 5px 35px;
+    background: red;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+    margin: 0px 0px;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px red, 0 0 25px red, 0 0 50px red, 0 0 100px red, 0 0 200px red;
+}
+
+.images {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.images img {
+    height: 101%;
+    width: 55%;
+    position: absolute;
+    left: 35%;
+    bottom: 160px;
+    transform: translateX(-50);
+
+    transition: .5s ease;
+    border-radius: 50%;
+    border: 5px solid rgb(146, 6, 6);
+}
+
+.images img:hover {
+    box-shadow: 0 0 5px red, 0 0 25px red, 0 0 50px red, 0 0 100px red, 0 0 200px red;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* ----------------about----------------- */
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 0rem;
+    background: url(img/smoke5.jpg) no-repeat;
+    background-size: cover;
+    padding: 2px;
+    padding-bottom: 6rem;
+}
+
+.head {
+    padding: 0rem;
+    font-size: 55px;
+    font-family: 'Philosopher', sans-serif;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 5px red, 0 0 100px red, 0 0 500px red;
+    text-decoration: none;
+}
+
+.about-img {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0px 0px 0px;
+}
+
+.about-img img {
+    top: 45px;
+    left: 45%;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.about-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    border-top: .2rem solid white;
+    border-bottom: .2rem solid white;
+    border-left: .2rem solid red;
+    border-right: .2rem solid red;
+    animation: aboutSpinner 8s linear infinite;
+}
+
+@keyframes aboutSpinner {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-content span {
+    font-family: 'Philosopher', sans-serif;
+}
+
+.about-content h3 {
+    font-size: 2.5rem;
+}
+
+.about-content p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1rem 19px 25px;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 15px 50px;
+    background: red;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+    margin: 0px 0px;
+}
+
+
+/* -----------------skills--------------------- */
+.sub-title {
+    text-align: center;
+    font-size: 60px;
+    padding: 0px 10% 0;
+    margin-bottom: 1rem;
+
+}
+
+.sub-title span {
+    font-family: 'Philosopher', sans-serif;
+    color: white;
+    text-shadow: 0 0 5px red, 0 0 100px red, 0 0 500px red;
+    text-decoration: none;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container1 {
+    width: 600px;
+    height: 500px;
+    padding: 55px 115px;
+    margin-left: 20px;
+}
+
+.myskills {
+    color: white;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 105vh;
+    background: url(img/smoke5.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px 2% 0;
+}
+
+.heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+.bar {
+    font-size: 23px;
+}
+
+.technical-bars .bar {
+    margin: 40px 0;
+}
+
+.technical-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.technical-bars .bar:last-child {
+    margin-bottom: 0;
+}
+
+.technical-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.technical-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.technical-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.technical-bars .bar .progress-line span {
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+
+}
+
+.progress-line.html span {
+    width: 90%;
+}
+
+.progress-line.css span {
+    width: 60%;
+}
+
+.progress-line.javascript span {
+    width: 85%;
+}
+
+.progress-line.react span {
+    width: 50%;
+}
+
+.progress-line span::after {
+    position: absolute;
+    padding: 1px 8px;
+    background-color: black;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+.progress-line.html span::after {
+    content: "90%";
+}
+
+.progress-line.css span::after {
+    content: "60%";
+}
+
+.progress-line.javascript span::after {
+    content: "85%";
+}
+
+.progress-line.react span::after {
+    content: "50%";
+
+}
+
+.progress-line span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+.radial-bars {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.radial-bars .radial-bar {
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.radial-bars .radial-bar svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+
+.radial-bars .radial-bar .progress-bar {
+    stroke-width: 10;
+    stroke: #000;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+
+@keyframes animate-bar {
+    100% {
+        stroke-dashoffset: -1;
+    }
+}
+
+.path {
+    stroke-width: 10;
+    stroke: red;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.path-1 {
+    animation: animate-path1 1s 1s linear forwards;
+}
+
+.path-2 {
+    animation: animate-path2 1s 1s linear forwards;
+}
+
+.path-3 {
+    animation: animate-path3 1s 1s linear forwards;
+}
+
+.path-4 {
+    animation: animate-path4 1s 1s linear forwards;
+}
+
+@keyframes animate-path1 {
+    100% {
+        stroke-dashoffset: 50;
+    }
+}
+
+@keyframes animate-path2 {
+    100% {
+        stroke-dashoffset: 175;
+    }
+}
+
+@keyframes animate-path3 {
+    100% {
+        stroke-dashoffset: 125;
+    }
+}
+
+@keyframes animate-path4 {
+    100% {
+        stroke-dashoffset: 75;
+    }
+}
+
+.radial-bar .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5 1s linear forwards;
+    opacity: 0;
+}
+
+.radial-bar .text {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/* -------------------project section-------------------- */
+
+.container {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(img/smoke5.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.sub {
+    text-align: center;
+    font-size: 60px;
+    padding: 12px 10% 0;
+    margin-bottom: 3rem;
+    
+}
+
+.sub span {
+    font-family: 'Philosopher', sans-serif;
+    color: white;
+    text-shadow: 0 0 5px red, 0 0 100px red, 0 0 500px red;
+    text-decoration: none;
+}
+
+.container .video-container {
+    padding: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container .video-container .video {
+    height: 202px;
+    width: 255px;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .7);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.container .video-container .video video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.container .video-container .video:hover video {
+    transform: scale(1.1);
+}
+
+.container .popup-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, .8);
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.container .popup-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    border-radius: 5px;
+    border: 3px solid #fff;
+    object-fit: cover;
+}
+
+.container .popup-video span {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 50px;
+    color: #fff;
+    font-weight: bolder;
+    z-index: 100;
+    cursor: pointer;
+}
+
+/* ----------contact Section ---------------- */
+.ContacT{
+    color: white;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(img/smoke5.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px 5% 0; 
+}
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2.5rem;
+    margin: 10%;
+}
+
+.contact-text{
+    padding: 0px;
+    gap: 1px;
+}
+
+.contact-text h4{
+    padding: 0px ;
+    margin: 18px 0;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.contact-text h2{
+    font-size: 60px;
+    line-height: 1;
+}
+
+.contact-text span{
+    font-family: 'Philosopher', sans-serif;
+    color: white;
+    text-shadow: 0 0 5px red, 0 0 100px red, 0 0 500px red;
+    text-decoration: none;
+}
+
+.contact-text p{
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.list{
+    margin-bottom: 2.8rem;
+    list-style: none;
+}
+
+.list li{
+    margin-bottom: 12px;
+    /* text-decoration: none; */
+}
+
+.list li a{
+    display: block;
+    font-size: 18px;
+    transition: all .45s ease;
+    text-decoration: none;
+    color: white;
+}
+
+.list li a:hover{
+    color: var(red);
+    transform: translateY(5px);
+}
+
+.contact-form form{
+    position: relative;
+}
+
+.contact-form form  input, form textarea{
+    width: 100%;
+    padding: 14px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+} 
+
+.contact-form textarea{
+    resize: none;
+    height: 240px;
+}
+
+.contact-form .submit{
+    display: inline-block;
+    background: red;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;    
+}
+
+.contact-form .submit:hover {
+    box-shadow: 0 0 5px red, 0 0 25px red, 0 0 50px red, 0 0 100px red, 0 0 200px red;
+}
+
+/* -----------------gift container ------------- */
+.gifts{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: url(img/smoke5.jpg) no-repeat; */
+    /* background-color: red; */
+    background-size: cover;
+    overflow: hidden;
+    
+}
+
+.giftcontainer{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+.giftcontainer::before{
+    content: '';
+    position: absolute;
+    width: 159px;
+    height: 9px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    top: 50px;
+    left: -80px;
+}
+
+.gift{
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    background-color: #e9c46a;
+}
+
+.gift::before{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 100px;
+    background-color: #e76f51;
+    left: 62px;
+}
+.gift::after{
+    content: '';
+    position: absolute;
+    box-shadow: inset 0 10px rgba(0, 0, 0, .3);
+    width: 150px;
+    height: 100px;
+}
+
+#click{
+    display: none;
+}
+
+.click{
+position: absolute;
+background-color: #e9c46a;
+width: 170px;
+height: 40px;
+top: -40px;
+left: -10px;
+transform-origin: bottom left;
+transition: 0.3s;
+cursor: pointer;
+}
+
+.click::before{
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 40px;
+    background-color: #e76f51;
+    left: 72px;
+}
+
+.click::after{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 0;
+    border-bottom: 30px solid #e76f51;
+    border-top: 30px solid #e76f51;
+    border-left: 0px solid transparent;
+    border-right: 30px solid transparent;
+    transform: rotate(-90deg);
+    left: 65px;
+    top: -47px;
+    border-radius: 15px;
+}
+
+#click:checked+.click{
+    transform: rotate(-110deg) scale(0.85);
+}
+
+#click:checked~.wishes{
+    transform: translateY(-120px);
+}
+
+.wishes{
+    position: absolute;
+    transition: .5s;
+    color: #fff;
+    font-size: 25px;
+    text-transform: capitalize;
+    text-align: center;
+    z-index: -1;
+    left: 10px;
+    color: red;
+    text-shadow: 0 0 10px #020202;
+}
+
